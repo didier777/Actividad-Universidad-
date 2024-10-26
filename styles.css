@@ -1,0 +1,703 @@
+/* Importación de la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente bonita por defecto */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('ruta/a/tu/imagen.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+}
+
+/* Reset del margin y padding para asegurar que las secciones ocupen todo el ancho */
+* {
+    box-sizing: border-box;
+}
+
+/* Contenedor general para limitar el ancho del contenido */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 20px; /* Espaciado interno para evitar que el contenido llegue al borde */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to left, #0202d8, #0202d8);
+    /* Degradado de negro con transparencia a azul */
+    color: #fff;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    position: relative;
+    z-index: 10;
+    text-align: center; /* Centra el contenido del header */
+}
+
+/* Contenedor del header */
+header .container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el tamaño máximo del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 20px; /* Espaciado interno para evitar que el contenido llegue al borde */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilo para el logo */
+.logo {
+    max-width: 150px; /* Ajusta el tamaño máximo del logo */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Estilos del título del header */
+header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilos de navegación */
+nav {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usa Flexbox para distribuir los elementos en línea */
+    justify-content: space-around; /* Distribuye los elementos con espacio igual entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px; /* Espaciado interno en la barra de navegación */
+    border-radius: 8px; /* Bordes redondeados para el fondo */
+}
+
+nav ul li {
+    flex: 1; /* Cada elemento de la lista ocupa un espacio igual */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+}
+
+nav ul li a {
+    display: block;
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 15px 20px; /* Ajusta el padding para darle altura a los enlaces */
+    font-size: 1.1em; /* Tamaño de fuente más grande para mayor visibilidad */
+    border-radius: 8px; /* Bordes redondeados para los enlaces */
+    transition: background 0.3s ease, color 0.3s ease; /* Transición suave para efectos de hover */
+    text-transform:uppercase;
+    
+}
+
+/* Efecto hover para los enlaces de navegación */
+nav ul li a:hover {
+    color: #ffffff; /* Texto blanco */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Portada */
+#cover {
+    background-image: linear-gradient(to left, #000000, #0000ff); /* Degradado de negro a azul sin transparencia */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px; /* Ajusta el padding según sea necesario */
+    height: 85vh; /* Ocupa toda la altura de la ventana del navegador */
+    width: 100%; /* Ocupa todo el ancho de la ventana del navegador */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Contenido de la portada */
+.cover-content h1 {
+    margin: 0;
+    font-size: 3em; /* Tamaño del texto del título */
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+     
+}
+
+.cover-content p {
+    font-family: 'Open Sans', sans-serif; /* Fuente alternativa para el párrafo */
+    font-size: 1.6em; /* Tamaño del texto del párrafo */
+    color: #f5f0f0; /* Color del texto para un buen contraste */
+    font-weight: 300; /* Peso de la fuente para mayor legibilidad */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+    margin-top: 10px; /* Espacio superior para separación */
+    margin-bottom: 10px; /* Espacio inferior para separación */
+}
+
+/* Estilos para el botón de llamada a la acción */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #04298f, #00aaff);
+    color: #fff; /* Texto blanco */
+    padding: 12px 24px; /* Ajusta el padding para hacerlo más grande */
+    text-decoration: none;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.1em; /* Tamaño de fuente ligeramente más grande */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave para los efectos de hover */
+    position: relative; /* Necesario para el efecto de latido */
+    overflow: hidden; /* Oculta el latido fuera del botón */
+    animation: heartbeat 1.5s infinite; /* Aplicar la animación de latido */
+}
+
+/* Efecto hover para el botón */
+.cta-button:hover {
+    background: #0000cc; /* Azul más oscuro al pasar el ratón */
+    box-shadow: 0 6px 12px rgb(196, 177, 177); /* Sombra más pronunciada al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Estilos de las secciones */
+section {
+    padding: 4rem 20px; /* Espaciado interno vertical y horizontal */
+    width: 100%; /* Ocupa todo el ancho de la ventana del navegador */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+}
+
+/* Estilos adicionales para cada sección */
+#home, #services, #about, #contact {
+    background: linear-gradient(to right, #ffffff, #d0e3ff); /* Degradado de blanco a azul claro */
+    padding: 4rem 20px; /* Ajusta el padding según sea necesario */
+}
+
+/* Servicios y otras secciones */
+.service {
+    margin-bottom: 1.5rem;
+}
+
+/* Títulos de los servicios con fondo degradado */
+.service h3 {
+    background: linear-gradient(to right, #04298f, #00aaff); /* Degradado de azul claro a azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px; /* Espaciado interno alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    font-family: 'Roboto', sans-serif; /* Fuente del título */
+    font-weight: bold; /* Negrita para el título */
+}
+
+/* Formularios */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Estilo para las etiquetas de todos los campos del formulario */
+form label {
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+/* Estilo para los campos del formulario */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc; /* Borde gris claro por defecto */
+    border-radius: 5px;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Transición suave para cambios de estilo */
+}
+
+/* Efecto al enfocarse en los campos del formulario */
+form input:focus, form textarea:focus {
+    border-color: #0000ff; /* Borde azul al hacer foco */
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5); /* Sombra azul para dar un efecto de resaltado */
+}
+
+/* Estilo para el botón del formulario */
+form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave para efectos de hover */
+}
+
+/* Efecto hover para el botón del formulario */
+form button:hover {
+    background: #0530f1;
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Estilo específico para la dirección de correo electrónico en el párrafo de contacto */
+#contact p {
+    color: #333; /* Color del texto por defecto */
+}
+
+#contact p a {
+    color: #0000ff; /* Azul brillante para el correo electrónico */
+    font-weight: bold; /* Negrita para destacar el correo electrónico */
+    text-decoration: none; /* Sin subrayado para el correo electrónico */
+}
+
+/* Estilo para el correo electrónico cuando pasa el ratón por encima */
+#contact p a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón para indicar interactividad */
+}
+
+/* F O O T E R FINAL DE LA PAGINA */
+
+
+/* Estilos del Footer */
+footer {
+    background: linear-gradient(to right, #04298f, #00aaff);; /* Degradado de colores vivos */
+    color: #fff; /* Color del texto claro */
+    padding: 40px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info, .footer-links, .footer-social {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+    margin-top: 0;
+    font-size: 1.4em; /* Tamaño del texto de los títulos */
+    color: #fff;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #ffeb3b; /* Color brillante para los enlaces */
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffeb3b; /* Color brillante para los enlaces */
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background: linear-gradient(to right, #04298f, #00aaff); /* Fondo oscuro con opacidad para la parte inferior */
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+
+
+
+/* Estilo para el ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el fondo de la página */
+    right: 20px;  /* Distancia desde el lado derecho de la página */
+    background-color: #08f027; /* Color de fondo de WhatsApp */
+    color: #fff; /* Color del ícono */
+    border-radius: 50%; /* Bordes redondeados */
+    width: 60px; /* Ancho del ícono */
+    height: 60px; /* Alto del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Tamaño del ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para darle profundidad */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Color de fondo más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+}
+
+.whatsapp-icon i {
+    margin: 0; /* Elimina márgenes alrededor del ícono */
+}
+
+/* Contenedor del video */
+#video {
+    text-align: center; /* Centra el video horizontalmente */
+    padding: 2rem 20px; /* Espaciado interno alrededor del video */
+}
+
+
+
+/* Estilos para la sección del blog */
+#blog {
+    padding: 4rem 20px; /* Espaciado interno */
+    background: linear-gradient(to right, #ffffff, #d0e3ff); /* Degradado para el fondo de la sección */
+    border-radius: 12px; /* Bordes redondeados para la sección */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil para la sección */
+}
+
+.containerr {
+    background: #ffffff; /* Fondo blanco para el contenedor dentro de la sección */
+    padding: 2rem; /* Espaciado interno del contenedor */
+    border-radius: 12px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 2rem auto; /* Centrar el contenedor con márgenes automáticos */
+}
+
+.containerr:hover {
+    transform: translateY(-4px); /* Efecto de elevar el contenedor al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+.blog-post {
+    margin-bottom: 2rem; /* Espacio entre publicaciones */
+    padding: 1.5rem; /* Espaciado interno de las publicaciones */
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
+}
+
+.blog-post:hover {
+    transform: translateY(-2px); /* Efecto de elevar la publicación al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+.blog-post h3 {
+    font-size: 1.6em; /* Tamaño del título de la publicación */
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    color: #04298f; /* Color del título */
+    font-weight: 600; /* Peso de fuente para mayor énfasis */
+}
+
+.blog-post p {
+    font-size: 1.1em; /* Tamaño del texto de la publicación */
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.blog-post a {
+    display: inline-block;
+    background: linear-gradient(to right, #0077cc, #00aaff); /* Degradado para el botón */
+    color: #fff; /* Texto blanco */
+    padding: 12px 24px; /* Espaciado del botón */
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.blog-post a:hover {
+    background: #005fa3; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevar el botón al pasar el mouse */
+}
+
+/* Estilo para la imagen en la publicación (si corresponde) */
+.blog-post img {
+    max-width: 100%; /* Asegurar que la imagen no exceda el ancho del contenedor */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+
+
+
+
+.video-section {
+    background: linear-gradient(to right, #ffffff, #d0e3ff); /* Degradado de blanco a azul claro */
+    padding: 5px; /* Espaciado interno vertical y horizontal */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    display: flex; /* Usar Flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.video-container {
+    position: relative;
+    width: 80%; /* Cambia a 80% para hacerlo más grande en relación al contenedor */
+    padding-top: 25%; /* Mantiene una relación de aspecto de 16:9 */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que el iframe ocupe todo el alto del contenedor */
+    border-radius: 15px; /* Esquinas redondeadas del iframe */
+}
+
+.video-section h2 {
+    background: linear-gradient(to right, #04298f, #00aaff); /* Degradado de azul claro a azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px; /* Espaciado interno alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    font-family: 'Roboto', sans-serif; /* Fuente del título */
+    font-weight: bold; /* Negrita para el título */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+
+
+
+
+
+
+
+/* Estilos generales de la sección de reseñas */
+#reviews {
+    background: linear-gradient(to right, #f0f4ff, #07d4df); /* Degradado de fondo suave */
+    padding: 5rem 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    margin: 30px 0; /* Margen para el espaciado entre secciones */
+    border-radius: 15px; /* Bordes redondeados más pronunciados */
+    box-shadow: 0 8px 20px rgba(14, 14, 15, 0.15); /* Sombra más intensa */
+}
+
+/* Encabezado de reseñas */
+#reviews h2 {
+    font-family: 'Montserrat', sans-serif; /* Estilo de fuente moderna */
+    font-weight: 600; /* Peso de fuente semi-negrita */
+    color: #003366; /* Color del encabezado más oscuro */
+    margin-bottom: 1rem; /* Espacio debajo del encabezado */
+    font-size: 2.2rem; /* Tamaño del encabezado */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1.2px; /* Espaciado entre letras */
+}
+
+/* Texto de reseñas */
+#reviews p {
+    font-family: 'Lora', serif; /* Estilo de fuente serif para un toque elegante */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #444; /* Color del texto */
+    margin-bottom: 2.5rem; /* Espacio debajo del párrafo */
+    line-height: 1.7; /* Espaciado entre líneas */
+}
+
+/* Botón de llamada a la acción */
+.cta-button {
+    display: inline-block;
+    background: #0073e6; /* Color azul vibrante */
+    color: #fff; /* Texto blanco */
+    padding: 12px 28px; /* Padding del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 25px; /* Bordes redondeados */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición para efecto hover */
+    font-weight: bold; /* Peso de fuente para el botón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+}
+
+.cta-button:hover {
+    background: #005bb5; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Carrusel */
+#reviewList {
+    display: flex; /* Uso de flexbox para organizar las reseñas */
+    gap: 30px; /* Espaciado entre las tarjetas */
+    overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    padding: 20px 0; /* Espaciado vertical */
+    scroll-behavior: smooth; /* Transición suave al desplazarse */
+}
+
+/* Tarjeta de reseña */
+.review {
+    flex: 0 0 320px; /* Cada tarjeta ocupa 320px de ancho */
+    background-color: #ffffff; /* Fondo blanco para las reseñas */
+    color: #333; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Lora', serif; /* Estilo de fuente serif */
+    font-size: 1rem; /* Tamaño de fuente */
+    min-width: 280px; /* Mínimo de ancho para tarjetas en pantallas pequeñas */
+    margin: 10px; /* Margen entre tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efecto hover */
+}
+
+.review:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más intensa al pasar el mouse */
+}
+
+/* Estilo para el nombre del autor */
+.review-author {
+    font-weight: bold; /* Texto en negrita para el autor */
+    margin-bottom: 5px; /* Espacio debajo del autor */
+    font-size: 1.1rem; /* Tamaño de fuente para el autor */
+    color: #0073e6; /* Color azul para el nombre del autor */
+}
+
+/* Estilo para la fecha */
+.review-date {
+    color: #888; /* Color más claro para la fecha */
+    font-size: 0.9rem; /* Tamaño de fuente para la fecha */
+}
+
+
+
+
+
+
+
+
+
+/* Fondo de la página con degradado */
+body {
+    background: linear-gradient(to right, #ffffff, #d0e3ff); /* Degradado de fondo suave */
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el formulario de reseña */
+#review-form {
+    max-width: 500px; /* Ampliar el ancho máximo */
+    margin: 60px auto; /* Margen superior para separación */
+    padding: 35px; /* Aumentar padding para comodidad */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados marcados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más profunda */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Título centrado con estilo elegante */
+#review-form h2 {
+    color: #04298f; /* Color oscuro para el texto */
+    padding-bottom: 10px; /* Espaciado debajo del título */
+    border-bottom: 2px solid #00aaff; /* Línea decorativa debajo del título */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Peso de fuente en negrita */
+    text-align: center; /* Centrar el texto */
+    margin: 0 0 20px; /* Espacio debajo del título */
+}
+
+/* Etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 8px; /* Espacio debajo de las etiquetas */
+    font-weight: 600; /* Peso de fuente seminegrita */
+    color: #555; /* Color gris para las etiquetas */
+    font-size: 0.95rem; /* Tamaño de fuente */
+}
+
+/* Estilo para inputs y textarea */
+input[type="text"],
+textarea {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre campos */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición para el borde */
+}
+
+/* Efecto en el input al enfocar */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #00aaff; /* Cambiar el color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5); /* Sombra sutil al enfocar */
+    outline: none; /* Sin contorno predeterminado */
+}
+
+/* Botón de enviar en el formulario */
+button {
+    background: #00aaff; /* Color de fondo del botón */
+    color: #fff; /* Texto blanco */
+    padding: 12px 20px; /* Aumentar el padding */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 1.1rem; /* Tamaño de fuente del botón */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    display: block; /* Hacer que el botón ocupe todo el ancho */
+    width: 100%; /* Botón ocupa todo el ancho disponible */
+}
+
+/* Efecto de hover en el botón */
+button:hover {
+    background: #0077cc; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
