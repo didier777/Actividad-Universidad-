@@ -5,6 +5,7 @@ function guardarReseñaEnLocalStorage(nombre, mensaje, fecha) {
     localStorage.setItem('reviews', JSON.stringify(savedReviews));
 }
 
+//
 // Función para agregar una reseña al DOM
 function agregarReseña(nombre, mensaje, fecha) {
     const reviewList = document.getElementById('reviewList');
